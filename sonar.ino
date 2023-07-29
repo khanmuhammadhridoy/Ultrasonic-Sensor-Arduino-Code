@@ -29,7 +29,7 @@ void loop()
     Serial.print("Distance: ");
     Serial.println(distance);
     // check distance and blinking
-    if ((distance >= 0) && (distance <= 100))
+    if (distance <= 100)
     {
         digitalWrite(LED, HIGH);
     }
