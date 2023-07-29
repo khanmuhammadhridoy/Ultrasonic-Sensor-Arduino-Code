@@ -7,7 +7,7 @@ long duration;
 int distance;
 void setup()
 {
-    pinMode(5, OUTPUT);
+    pinMode(LED, OUTPUT);
     pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
     pinMode(echoPin, INPUT);  // Sets the echoPin as an Input
     Serial.begin(36000);      // Starts the serial communication
@@ -37,7 +37,7 @@ void loop()
     {
         digitalWrite(LED, LOW);
     }
-    if ((distance >= 100) && (distance <= 200))
+    if ((distance > 100) && (distance <= 200))
     {
         digitalWrite(LED, HIGH);
         delay(500);
